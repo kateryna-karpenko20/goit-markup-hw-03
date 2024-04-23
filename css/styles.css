@@ -44,6 +44,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .main-nav {
@@ -56,12 +57,13 @@ body {
 .menu {
   display: flex;
   flex-direction: row;
-  column-gap: 40px;
+  gap: 40px;
 }
 
-.page-address {
+.menu-address {
   display: flex;
   flex-direction: row;
+  gap: 40px;
 }
 
 .logo-type {
@@ -134,7 +136,7 @@ address {
   color: #ffffff;
   margin-left: auto;
   margin-right: auto;
-  width: 496px;
+  max-width: 496px;
   margin-bottom: 48px;
 }
 
@@ -172,6 +174,11 @@ address {
   padding-bottom: 120px;
 }
 
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
 .item-title-benefits {
   font-weight: 500;
   font-size: 20px;
@@ -191,7 +198,11 @@ address {
 .menu-benefits {
   display: flex;
   flex-direction: row;
-  column-gap: 24px;
+  gap: 24px;
+}
+
+.menu-item-benefits {
+  width: calc((100% - 72px) / 4);
 }
 
 .section-team {
@@ -201,7 +212,7 @@ address {
 .menu-team {
   display: flex;
   background-color: #ffffff;
-  column-gap: 24px;
+  gap: 24px;
 }
 
 .main-title {
@@ -222,15 +233,18 @@ address {
   background-color: #fff;
 }
 
+.team-worker {
+  padding: 32px 0;
+}
+
 .item-title-team {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-top: 32px;
-  margin-bottom: 8px;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .item-text-team {
@@ -251,8 +265,14 @@ address {
 }
 
 .menu-item-portfolio {
-  border-bottom: 1px solid #e7e9fc;
   width: calc((100% - 48px) / 3);
+}
+
+.itens-portfolio {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+  margin-bottom: 8px;
 }
 
 .item-title-portfolio {
@@ -287,6 +307,8 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .page-footer .logo-studio {
@@ -298,5 +320,4 @@ address {
   line-height: 1.5;
   color: #f4f4fd;
   letter-spacing: 0.02em;
-  margin-top: 15px;
 }
